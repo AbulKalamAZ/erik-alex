@@ -3,7 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 
-export default function HoverTrigger({ top = "top-96", left = "left-96" }) {
+export default function HoverTrigger({
+  top = "top-96",
+  left = "left-96",
+  onClick,
+}) {
   const [isOuterCircleHovered, setIsOuterCircleHovered] = useState(false);
   const [isInnerCircleHovered, setIsInnerCircleHovered] = useState(false);
 
@@ -12,6 +16,7 @@ export default function HoverTrigger({ top = "top-96", left = "left-96" }) {
       className={`w-full h-full absolute ${top} ${left}`}
       onMouseEnter={() => setIsOuterCircleHovered(!isOuterCircleHovered)}
       onMouseLeave={() => setIsOuterCircleHovered(!isOuterCircleHovered)}
+      onClick={onClick}
       style={{
         backgroundColor: isOuterCircleHovered ? "#fff3" : "#ffffff52",
         border: "1px dashed #ffffff",
