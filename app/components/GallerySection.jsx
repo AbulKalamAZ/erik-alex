@@ -29,7 +29,7 @@ export default function GallerySection({ isOpen, setIsOpen }) {
       {/* Centered Image Container */}
       <div
         className="grid grid-cols-3 gap-8 bg-[#d6d2ae] rounded-lg p-8 shadow-inner max-w-6xl w-full"
-        style={{ marginTop: "85%" }}
+        style={{ marginTop: "75%" }}
       >
         {Array.from({ length: 13 }).map((_, i) => {
           let ext = "png";

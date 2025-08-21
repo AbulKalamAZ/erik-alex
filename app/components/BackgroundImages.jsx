@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 
-export default function BackgroundImages() {
+export default function BackgroundImages({ isOpen }) {
   return (
     <div className="image-container">
       {/* Your images */}
@@ -194,6 +194,16 @@ export default function BackgroundImages() {
           objectFit: "cover",
         }}
       />
+      {isOpen === "glass" ? (
+        <Image
+          src="/text.avif"
+          alt="text"
+          fill
+          style={{
+            objectFit: "cover",
+          }}
+        />
+      ) : null}
     </div>
   );
 }

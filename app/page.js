@@ -7,6 +7,7 @@ import GetRichSection from "./components/GetRichSection";
 import TokenomicSection from "./components/TokenomicSection";
 import ReadMeSection from "./components/ReadMeSection";
 import GallerySection from "./components/GallerySection";
+import GlassSection from "./components/GlassSection";
 
 export default function Home() {
   // Track which popup is open
@@ -23,6 +24,7 @@ export default function Home() {
         isOpen={openPopup === "getRich"}
         setIsOpen={setOpenPopup}
       />
+      <GlassSection isOpen={openPopup === "glass"} setIsOpen={setOpenPopup} />
       <TokenomicSection
         isOpen={openPopup === "tokenomic"}
         setIsOpen={setOpenPopup}
